@@ -15,7 +15,10 @@
     <!-- Lightbox -->
     <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
 
-    <title>BT Real Estate</title>
+    <!--Dynamic Title-->
+    <title>BT Real Estate 
+    {% block title %}{% endblock title %}
+    </title>
 </head>
 
 <body>
@@ -24,11 +27,11 @@
     <!-- Nav Bar -->
     {% include 'partials/_navbar.html' %}
     <!-- Main Content -->
-    {% block content%}
-    {% endblock %}
+    {% block content %}
+    {% endblock content %}
     <!-- Top Bar -->
     {% include 'partials/_footer.html' %}
-
+    
     <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %} "></script>
     <script src="{% static 'js/main.js' %} "></script>
